@@ -1,0 +1,155 @@
+﻿@{
+    ViewData["Title"] = "Política de Privacidade";
+}
+
+
+<style>
+    .privacy-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .header-section {
+        text-align: center;
+    }
+
+    .header-divider {
+        height: 4px;
+        width: 70px;
+        background-color: var(--primary-color);
+        margin: 20px auto 30px;
+        border-radius: 2px;
+    }
+
+    .policy-section {
+        border-left: 3px solid var(--primary-color);
+        padding-left: 20px;
+        margin-left: 10px;
+    }
+
+        .policy-section h3 {
+            font-weight: 600;
+            color: #333;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+    .policy-content {
+        padding-left: 10px;
+    }
+
+        .policy-content ul {
+            padding-left: 20px;
+        }
+
+        .policy-content li {
+            margin-bottom: 8px;
+        }
+
+    .contact-section {
+        border-left: none;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-info p {
+        margin-bottom: 8px;
+    }
+</style>
+
+<div class="privacy-container">
+    <div class="header-section mb-5">
+        <h1 class="section-title">@ViewData["Title"]</h1>
+        <div class="header-divider"></div>
+        <p class="lead text-secondary">
+            Esta política explica como coletamos, usamos e protegemos suas informações pessoais ao utilizar nossa Agenda de Contatos.
+        </p>
+    </div>
+
+    <div class="policy-section mb-4">
+        <h3><i class="fas fa-shield-alt text-primary me-2"></i>Coleta de Informações</h3>
+        <div class="policy-content">
+            <p>Ao utilizar nossa Agenda de Contatos, coletamos as seguintes informações:</p>
+            <ul>
+                <li>Informações de contato que você adiciona voluntariamente (nomes, números de telefone, endereços, emails)</li>
+                <li>Dados de uso para melhorar a experiência do usuário</li>
+                <li>Informações técnicas como tipo de dispositivo e navegador</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="policy-section mb-4">
+        <h3><i class="fas fa-file-contract text-primary me-2"></i>Uso das Informações</h3>
+        <div class="policy-content">
+            <p>Utilizamos suas informações para:</p>
+            <ul>
+                <li>Fornecer e manter o serviço de agenda de contatos</li>
+                <li>Melhorar e personalizar sua experiência</li>
+                <li>Enviar atualizações importantes relacionadas ao serviço</li>
+                <li>Detectar e prevenir atividades fraudulentas</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="policy-section mb-4">
+        <h3><i class="fas fa-lock text-primary me-2"></i>Proteção de Dados</h3>
+        <div class="policy-content">
+            <p>Implementamos medidas de segurança adequadas para proteger seus dados contra acesso não autorizado, alteração, divulgação ou destruição. Isso inclui:</p>
+            <ul>
+                <li>Criptografia de dados sensíveis</li>
+                <li>Revisões periódicas de segurança</li>
+                <li>Acesso restrito a informações pessoais</li>
+                <li>Backups regulares para prevenção de perda de dados</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="policy-section mb-4">
+        <h3><i class="fas fa-share-alt text-primary me-2"></i>Compartilhamento de Informações</h3>
+        <div class="policy-content">
+            <p>Não compartilhamos suas informações pessoais com terceiros, exceto nas seguintes circunstâncias:</p>
+            <ul>
+                <li>Quando exigido por lei</li>
+                <li>Para proteger nossos direitos</li>
+                <li>Com seu consentimento explícito</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="policy-section mb-4">
+        <h3><i class="fas fa-user-shield text-primary me-2"></i>Seus Direitos</h3>
+        <div class="policy-content">
+            <p>Você tem os seguintes direitos em relação aos seus dados pessoais:</p>
+            <ul>
+                <li>Direito de acesso às suas informações</li>
+                <li>Direito de retificação de dados imprecisos</li>
+                <li>Direito de exclusão de suas informações</li>
+                <li>Direito de restrição de processamento</li>
+                <li>Direito de portabilidade de dados</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="policy-section mb-4">
+        <h3><i class="fas fa-cookie-bite text-primary me-2"></i>Cookies</h3>
+        <div class="policy-content">
+            <p>Utilizamos cookies para melhorar sua experiência de navegação. Você pode configurar seu navegador para recusar cookies, mas isso pode afetar algumas funcionalidades do serviço.</p>
+        </div>
+    </div>
+
+    <div class="policy-section mb-4">
+        <h3><i class="fas fa-file-alt text-primary me-2"></i>Alterações na Política</h3>
+        <div class="policy-content">
+            <p>Podemos atualizar nossa Política de Privacidade periodicamente. Notificaremos sobre quaisquer alterações publicando a nova política nesta página.</p>
+        </div>
+    </div>
+
+    <div class="contact-section mt-5 p-4 bg-light rounded">
+        <h3><i class="fas fa-envelope text-primary me-2"></i>Contato</h3>
+        <p>Se você tiver dúvidas sobre esta Política de Privacidade, entre em contato conosco:</p>
+        <div class="contact-info">
+            <p><i class="fas fa-envelope-open me-2"></i>Email: privacy@agendadecontatos.com</p>
+            <p><i class="fas fa-phone me-2"></i>Telefone: (00) 1234-5678</p>
+        </div>
+    </div>
+
+</div>

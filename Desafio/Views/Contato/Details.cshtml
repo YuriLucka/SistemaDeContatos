@@ -1,0 +1,107 @@
+﻿@model Desafio.Models.Contato
+@{
+    ViewData["Title"] = "Detalhes do Contato";
+}
+
+<style>
+    .contacts-container {
+        max-width: 100%;
+    }
+
+    .detail-label {
+        font-weight: 600;
+        color: #555;
+        margin-bottom: 0.25rem;
+    }
+
+    .detail-value {
+        font-size: 1.1rem;
+        padding-left: 1.8rem;
+    }
+
+    .btn {
+        border-radius: 0.25rem;
+        padding: 0.5rem 1.5rem;
+        transition: all 0.2s;
+    }
+
+    .btn-outline-primary {
+        color: #3f51b5;
+        border-color: #3f51b5;
+    }
+
+        .btn-outline-primary:hover {
+            background-color: #3f51b5;
+            border-color: #3f51b5;
+            transform: translateY(-2px);
+        }
+
+    .btn-outline-danger:hover {
+        transform: translateY(-2px);
+    }
+
+    .btn-outline-secondary:hover {
+        transform: translateY(-2px);
+    }
+
+    .card {
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        border: none;
+    }
+
+    .text-primary {
+        color: #3f51b5 !important;
+    }
+</style>
+<div class="contacts-container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="section-title mb-0"><i class="fas fa-user-circle me-2"></i>Detalhes do Contato</h1>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="row mb-4">
+                <div class="col-md-8">
+                    <h4 class="text-primary mb-3">Informações Pessoais</h4>
+                    <div class="detail-item mb-3">
+                        <div class="detail-label">
+                            <i class="fas fa-user me-2 text-primary"></i>
+                            @Html.DisplayNameFor(model => model.Nome)
+                        </div>
+                        <div class="detail-value">
+                            @Html.DisplayFor(model => model.Nome)
+                        </div>
+                    </div>
+                    <div class="detail-item mb-3">
+                        <div class="detail-label">
+                            <i class="fas fa-phone me-2 text-primary"></i>
+                            @Html.DisplayNameFor(model => model.Telefone)
+                        </div>
+                        <div class="detail-value">
+                            @Html.DisplayFor(model => model.Telefone)
+                        </div>
+                    </div>
+                    <div class="detail-item mb-3">
+                        <div class="detail-label">
+                            <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+                            @Html.DisplayNameFor(model => model.Cidade)
+                        </div>
+                        <div class="detail-value">
+                            @Html.DisplayFor(model => model.Cidade)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-end mt-4">
+                <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-outline-primary me-2">
+                    <i class="fas fa-edit me-2"></i>Editar
+                </a>
+                <a asp-action="Delete" asp-route-id="@Model?.Id" class="btn btn-outline-danger me-2">
+                    <i class="fas fa-trash me-2"></i>Excluir
+                </a>
+                <a asp-action="Index" class="btn btn-outline-secondary">
+                    <i class="fas fa-list me-2"></i>Voltar para Lista
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+﻿@model Desafio.Models.Contato
+@{
+    ViewData["Title"] = "Excluir Contato";
+}
+
+<style>
+    .contacts-container {
+        max-width: 100%;
+    }
+
+    .detail-label {
+        font-weight: 600;
+        color: #555;
+        margin-bottom: 0.25rem;
+    }
+
+    .detail-value {
+        font-size: 1.1rem;
+        padding-left: 1.8rem;
+    }
+
+    .btn {
+        border-radius: 0.25rem;
+        padding: 0.5rem 1.5rem;
+        transition: all 0.2s;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+            transform: translateY(-2px);
+        }
+
+    .btn-outline-secondary:hover {
+        transform: translateY(-2px);
+    }
+
+    .card {
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        border: none;
+    }
+
+    .text-primary {
+        color: #3f51b5 !important;
+    }
+
+    .alert-danger {
+        border-left: 4px solid #dc3545;
+    }
+</style>
+<div class="contacts-container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="section-title mb-0"><i class="fas fa-trash-alt me-2 text-danger"></i>Excluir Contato</h1>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="alert alert-danger mb-4">
+                <i class="fas fa-exclamation-triangle me-2"></i>
+                <strong>Atenção:</strong> Você tem certeza que deseja excluir este contato? Esta ação não poderá ser desfeita.
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-8">
+                    <h4 class="text-primary mb-3">Informações do Contato</h4>
+                    <div class="detail-item mb-3">
+                        <div class="detail-label">
+                            <i class="fas fa-user me-2 text-primary"></i>
+                            @Html.DisplayNameFor(model => model.Nome)
+                        </div>
+                        <div class="detail-value">
+                            @Html.DisplayFor(model => model.Nome)
+                        </div>
+                    </div>
+                    <div class="detail-item mb-3">
+                        <div class="detail-label">
+                            <i class="fas fa-phone me-2 text-primary"></i>
+                            @Html.DisplayNameFor(model => model.Telefone)
+                        </div>
+                        <div class="detail-value">
+                            @Html.DisplayFor(model => model.Telefone)
+                        </div>
+                    </div>
+                    <div class="detail-item mb-3">
+                        <div class="detail-label">
+                            <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+                            @Html.DisplayNameFor(model => model.Cidade)
+                        </div>
+                        <div class="detail-value">
+                            @Html.DisplayFor(model => model.Cidade)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <div class="d-flex justify-content-end mt-4">
+                    <a asp-action="Index" class="btn btn-outline-secondary me-2">
+                        <i class="fas fa-times me-2"></i>Cancelar
+                    </a>
+                    <button type="submit" class="btn btn-danger">
+                        <i class="fas fa-trash me-2"></i>Confirmar Exclusão
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
